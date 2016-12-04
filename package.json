@@ -2,7 +2,7 @@
   "name": "bestest-buy",
   "version": "1.0.0",
   "description": "Best Buy vanilla JS SPA exam",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

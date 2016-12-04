@@ -9,7 +9,7 @@
      */
     function Category() {
         this.categories = [];
-        this.applicationHasLoaded = new BB.Observer(this);
+        this.applicationDataHasLoaded = new BB.Observer(this);
         this.categoryHasChanged = new BB.Observer(this);
     }
 
@@ -21,9 +21,9 @@
             method: 'GET',
             callback: function(data) {
                 self.categories = self.categories.concat(data.subCategories);
-                console.log(self);
+                self.applicationDataHasLoaded.notify(self.categories);
             }
-        });
+        }, true);
     };
 
     /**

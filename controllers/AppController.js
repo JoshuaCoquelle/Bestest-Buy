@@ -28,6 +28,7 @@
 
     ApplicationController.prototype.bootApplication = function() {
         this.CategoryController.initializeCategories();
+        this.ProductController.initializeProducts();
     };
 
     BB.AppController = new ApplicationController();

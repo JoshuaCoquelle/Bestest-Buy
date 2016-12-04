@@ -9,6 +9,7 @@
     BB.Views       = BB.Views    || {};
     BB.Controllers = BB.Ctrlrs   || {};
     BB.Observer    = BB.Observer || {};
-    BB.Template    = BB.Tmpl     || {};
+    BB.Template    = BB.Template || {};
     BB.AJAX        = BB.XHR      || {};
+    BB.DOM         = BB.DOM      || {};
 }(window.BestestBuy = window.BestestBuy || {}));

@@ -1,7 +1,7 @@
 (function(BB, undefined) {
 
-    function Observer(sender) {
-        this.sender = sender;
+    function Observer(model) {
+        this.model = model;
         this.callbacks = [];
     }
 
@@ -13,7 +13,7 @@
         var i;
 
         for (i = 0; i < this.callbacks.length; i++) {
-            this.callbacks[i](this.sender, args);
+            this.callbacks[i](this.model, args);
         }
     };
 
