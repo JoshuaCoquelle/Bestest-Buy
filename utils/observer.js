@@ -1,4 +1,4 @@
-(function(GB, undefined) {
+(function(BB, undefined) {
 
     function Observer(sender) {
         this.sender = sender;
@@ -17,5 +17,5 @@
         }
     };
 
-    GB.Observer = Observer;
-})(window.GreatBuy = window.GreatBuy || {});
+    BB.Observer = Observer;
+})(window.BestestBuy = window.BestestBuy || {});

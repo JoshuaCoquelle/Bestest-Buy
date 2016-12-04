@@ -3,7 +3,7 @@
 | Event Emitter
 | -----------------------------------------------------------------
 */
-(function(GB, undefined) {
+(function(BB, undefined) {
     /**
      * Ajax Constructor
      * 
@@ -23,5 +23,5 @@
     /**
      * Expose XHR Constructor
      */
-    GB.AJAX = AJAX;
-})(window.GreatBuy = window.GreatBuy || {});
+    BB.AJAX = AJAX;
+})(window.BestestBuy = window.BestestBuy || {});

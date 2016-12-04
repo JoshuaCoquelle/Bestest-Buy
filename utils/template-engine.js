@@ -1,4 +1,4 @@
-(function(GB, undefined) {
+(function(BB, undefined) {
     var templateParser = {
         curlyRegex: /\{\:([^}]+)?\:\}/g,
 
@@ -9,5 +9,5 @@
         }
     };
 
-    GB.Template = templateParser;
-})(window.GreatBuy = window.GreatBuy || {});
+    BB.Template = templateParser;
+})(window.BestestBuy = window.BestestBuy || {});

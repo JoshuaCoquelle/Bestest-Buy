@@ -4,7 +4,7 @@
 | -----------------------------------------------------------------
 */
 (function(BB, undefined) {
-    BB.App         = BB.App      || {}; 
+    BB.App         = BB.App      || {};
     BB.Models      = BB.Models   || {};
     BB.Views       = BB.Views    || {};
     BB.Controllers = BB.Ctrlrs   || {};
