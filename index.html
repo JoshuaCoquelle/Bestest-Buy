@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Great Buy</title>
+    <link rel="shortcut icon" href="">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="great-buy">
+        <div class="row">
+            <!-- Categories left navigation -->
+            <div class="col-md-4">
+                <ul id="categories-list" class="list-group"></ul>
+            </div>
+
+            <!-- Main products list -->
+            <div class="col-md-8">
+                <ul id="products-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <script src="app.js"></script>
+
+    <!-- Models -->
+    <script src="models/Category.js"></script>
+    <script src="models/Product.js"></script>
+
+    <!-- Views -->
+    <script src="views/CategoryView.js"></script>
+    <script src="views/ProductView.js"></script>
+
+    <!-- Utilities -->
+    <script src="utils/ajax.js"></script>
+    <script src="utils/template-engine.js"></script>
+    <script src="utils/observer.js"></script>
+
+    <!-- Controllers -->
+    <script src="controllers/CategoryController.js"></script>
+    <script src="controllers/ProductController.js"></script>
+    <script src="controllers/AppController.js"></script>
+</body>
+</html>
