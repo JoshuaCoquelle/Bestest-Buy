@@ -1,0 +1,19 @@
+{
+  "name": "bestest-buy",
+  "version": "1.0.0",
+  "description": "Best Buy vanilla JS SPA exam",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaCoquelle/Bestest-Buy.git"
+  },
+  "author": "Joshua Coquelle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshuaCoquelle/Bestest-Buy/issues"
+  },
+  "homepage": "https://github.com/JoshuaCoquelle/Bestest-Buy#readme"
+}
