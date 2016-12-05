@@ -1,9 +1,9 @@
 (function(BB, undefined) {
     var templateParser = {
-        curlyRegex: /\{\:([^}]+)?\:\}/g,
+        templateRegex: /\{\:([^}]+)?\:\}/g,
 
         compile: function(template, dataObj) {
-            return template.replace(this.curlyRegex, function(extracted, key) {
+            return template.replace(this.templateRegex, function(extracted, key) {
                 return dataObj[key.trim()];
             });
         }

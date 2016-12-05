@@ -1,16 +1,21 @@
 (function(BB, undefined) {
-    function CategoryController(model, view) {
+    function CategoryController(model, view, productController) {
         var self = this;
+        self.model = model;
+        self.view = view;
+        self.productController = productController;
 
-        this.model = model;
-        this.view = view;
-
-        this.model.applicationDataHasLoaded.attach(function(model, categories) {
+        // Send all categories to be rendered by the view.
+        self.model.applicationDataHasLoaded.attach(function(model, categories) {
             self.appendCategoriesToList(categories);
+        });
+
+        // Retrieve all products for the newly selected category.
+        self.view.newCategorySelected.attach(function(sender, categoryId) {
+            self.productController.getProductsByCategoryId(categoryId);
         });
     }
 
-    // entry point after boot
     CategoryController.prototype.initializeCategories = function() {
         this.model.getCategoriesOnAppLoad();
     };

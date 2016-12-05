@@ -1,0 +1,4 @@
+#categories-list li:hover {
+    cursor: pointer;
+    background-color: #C2DCED;
+}

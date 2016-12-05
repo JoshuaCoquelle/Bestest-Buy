@@ -9,7 +9,8 @@
      */
     function CategoryView() {
         this.categoryList = document.getElementById('categories-list');
-        this.categoryHasBeenSelected = new BB.Observer(this);
+        this.currentCategory = new BB.Observer(this);
+        this.newCategorySelected = new BB.Observer(this);
 
         this.bindEvents();
     }
@@ -32,7 +33,7 @@
             var target = e.target;
             var categoryId = (target.nodeName === 'LI') ? target.dataset.id : target.parentNode.dataset.id
 
-            self.categoryHasBeenSelected.notify(categoryId);
+            self.newCategorySelected.notify(categoryId);
         });
     };
 
