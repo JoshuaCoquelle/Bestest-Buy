@@ -21,6 +21,8 @@
      * Register all callbacks for registered observers.
      */
     ProductController.prototype.attachObserverCallbacks = function() {
+        var self = this;
+
         // Append products to product list UI on first page load.
         self.model.allProductsHaveLoaded.attach(function(model, products) {
             self.appendFirstProductsToList(products);
