@@ -17,23 +17,26 @@
         // Product list selector (ul).
         PRODUCT_LIST: document.getElementById('products-list'),
 
+        // Product detail modal selector.
+        PRODUCT_DETAIL_MODAL: document.getElementById('modal'),
+
         // Product main container list item image.
         PRODUCT_LIST_ITEM: ''
-        + '<li class="col-md-4"'
-        +     'data-product-name="{: name :}"'
-        +     'data-product-description="{: shortDescription :}"'
-        +     'data-high-res-img="{: highResImage :}"'
+        + '<li class="col-md-4" '
+        +     'data-product-name="{: name :}" '
+        +     'data-product-description="{: shortDescription :}" '
+        +     'data-high-res-img="{: highResImage :}" '
         +     'style="list-style: none"'
         +'>'
         +     '<img src={: thumbnailImage :} />'
         + '</li>',
 
-        // Product modal template.
-        PRODUCT_ITEM_DETAIL: ''
+        PRODUCT_DETAIL_MODAL_TEMPLATE: ''
         + '<div>'
-        +     '<img src={: highResImage :} />'
-        +     '<p>{: name :}</p>'
-        +     '<p>{: shortDescription :}</p>'
+        +     '<img src={: highResImg :} class="img-responsive"/> '
+        +     '<h4>{: productName :}</h4> '
+        +     '<hr>'
+        +     '<p>{: productDescription :}</p>'
         + '</div>'
     };
 

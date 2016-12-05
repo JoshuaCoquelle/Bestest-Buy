@@ -13,7 +13,12 @@
         });
 
         self.model.productsHaveBeenUpdated.attach(function(model, products) {
+            self.view.productModalEl.innerHTML = '';
             self.rerenderProductsUI(products);
+        });
+
+        self.view.modalHasBeenTriggered.attach(function(modal, productDetails) {
+            self.renderProductModal(productDetails);
         });
     }
 
@@ -35,6 +40,10 @@
 
     ProductController.prototype.rerenderProductsUI = function(products) {
         this.view.rerenderProductList(products);
+    };
+
+    ProductController.prototype.renderProductModal = function(productDetails) {
+        this.view.buildDetailsModal(productDetails);
     };
 
     BB.Controllers.ProductController = ProductController;

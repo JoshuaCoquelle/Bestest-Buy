@@ -1,4 +1,39 @@
+/*
+-----------------------------------
+       Category Left Nav
+-----------------------------------
+*/
+
 #categories-list li:hover {
     cursor: pointer;
     background-color: #C2DCED;
+}
+
+/*
+-----------------------------------
+       Product detail modal
+-----------------------------------
+*/
+
+#modal {
+    top: 0;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    position: fixed;
+}
+
+#modal > div {
+    background-color: #DDD;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#product-modal {
+    padding: 20px 30px;
+    width: 600px;
+    position: relative;
+    min-height: 300px;
+    margin: 5% auto 0;
+    background: #fff;
 }
