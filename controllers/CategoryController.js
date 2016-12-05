@@ -1,4 +1,16 @@
+/*
+| -----------------------------------------------------------------
+| Category Controller
+| -----------------------------------------------------------------
+*/
 (function(BB, undefined) {
+    /**
+     * CategoryController Constructor.
+     * 
+     * @param {Model} model                         | A new model instance.
+     * @param {View} view                           | A new view instance.
+     * @param {ProductController} productController | A nested Product Controller instance.
+     */
     function CategoryController(model, view, productController) {
         var self = this;
         self.model = model;
@@ -16,10 +28,16 @@
         });
     }
 
+    /**
+     * Model wrapper to load all categories from Buy Buy API. 
+     */
     CategoryController.prototype.initializeCategories = function() {
         this.model.getCategoriesOnAppLoad();
     };
 
+    /**
+     * View wrapper to append all categoriy UI elements to container.
+     */
     CategoryController.prototype.appendCategoriesToList = function(categories) {
         this.view.appendAllCategories(categories);
     };

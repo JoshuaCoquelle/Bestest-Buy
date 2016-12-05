@@ -31,6 +31,7 @@
         +     '<img src={: thumbnailImage :} />'
         + '</li>',
 
+        // Selected product details modal content.
         PRODUCT_DETAIL_MODAL_TEMPLATE: ''
         + '<div>'
         +     '<img src={: highResImg :} class="img-responsive"/> '

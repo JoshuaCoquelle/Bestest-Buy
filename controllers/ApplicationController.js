@@ -1,4 +1,12 @@
+/*
+| -----------------------------------------------------------------
+| Application Controller
+| -----------------------------------------------------------------
+*/
 (function(BB, undefined) {
+    /**
+     * Instance all required model, view and controllers instances.
+     */
     function ApplicationController() {
         var self = this;
 
@@ -10,12 +18,13 @@
         var productView = new BB.Views.ProductView();
         var categoryView = new BB.Views.CategoryView();
 
-        // Boot application controllers.
+        // Boot product controller.
         BB.Controllers.ProductController = new BB.Controllers.ProductController(
             productModel,
             productView
         );
 
+        // Boot category controller.
         BB.Controllers.CategoryController = new BB.Controllers.CategoryController(
             categoryModel,
             categoryView,
@@ -28,6 +37,9 @@
         this.Product = productModel;
     }
 
+    /**
+     * Boot the application by initializing first loaded categories and products.
+     */
     ApplicationController.prototype.bootApplication = function() {
         this.CategoryController.initializeCategories();
         this.ProductController.initializeProducts();

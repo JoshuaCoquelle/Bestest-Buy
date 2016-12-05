@@ -5,7 +5,9 @@
 */
 (function(BB, undefined) {
     /**
-     * Category Model Constructor
+     * Category Model Constructor.
+     * 
+     * Initialize categories array and instantiate needed observers.
      */
     function Category() {
         this.categories = [];
@@ -13,6 +15,9 @@
         this.categoryHasChanged = new BB.Observer(this);
     }
 
+    /**
+     * Get all categories from Best Buy API on page load.
+     */
     Category.prototype.getCategoriesOnAppLoad = function() {
         var self = this;
 
@@ -26,8 +31,5 @@
         }, true);
     };
 
-    /**
-     * Expose Category Constructor
-     */
     BB.Models.Category = Category;
 })(window.BestestBuy = window.BestestBuy || {});

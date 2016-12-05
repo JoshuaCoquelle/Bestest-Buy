@@ -1,11 +1,11 @@
 /*
 | -----------------------------------------------------------------
-| Product View
+| Category View
 | -----------------------------------------------------------------
 */
 (function(BB, undefined) {
     /**
-     * Product View Constructor.
+     * Category View Constructor.
      */
     function CategoryView() {
         this.categoryList = document.getElementById('categories-list');
@@ -15,6 +15,11 @@
         this.bindEvents();
     }
 
+    /**
+     * Compile and render the categories template with category data.
+     * 
+     * @param {Category<Array>} categories | An array of categories.
+     */
     CategoryView.prototype.appendAllCategories = function(categories) {
         var self = this;
         var categoryList = BB.DOM.CATEGORY_LIST;
@@ -25,6 +30,9 @@
         });
     };
 
+    /**
+     * Bind all event handlers to category UI elements.
+     */
     CategoryView.prototype.bindEvents = function() {
         var self = this;
         var categoryList = this.categoryList;

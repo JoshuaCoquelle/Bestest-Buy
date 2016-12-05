@@ -1,11 +1,13 @@
 /*
 | -----------------------------------------------------------------
-| Category Model
+| Product Model
 | -----------------------------------------------------------------
 */
 (function(BB, undefined) {
     /**
-     * Category Model Constructor
+     * Category Model Constructor.
+     * 
+     * Initialize the products array and instantiate needed observers.
      */
     function Product() {
         this.products = [];
@@ -14,6 +16,9 @@
         this.productsHaveBeenUpdated = new BB.Observer(this);
     }
 
+    /**
+     * Once application foundation has been bootstrapped, call products API for first load.
+     */
     Product.prototype.getProductsOnAppLoad = function() {
         var self = this;
 
@@ -27,6 +32,9 @@
         }, true);
     };
 
+    /**
+     * Get products by specified category from Best Buy API.
+     */
     Product.prototype.getProductsByCategory = function(categoryId) {
         var self = this;
 
@@ -39,13 +47,13 @@
         }, true);
     };
 
+    /**
+     * Update Product instances products property from ajax callback data.
+     */
     Product.prototype.updateProductsArray = function(products) {
         this.products = products || [];
         this.productsHaveBeenUpdated.notify(this.products);
     };
 
-    /**
-     * Expose Category Constructor
-     */
     BB.Models.Product = Product;
 })(window.BestestBuy = window.BestestBuy || {});
